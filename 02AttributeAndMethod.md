@@ -6,7 +6,7 @@
 		<Tên lớp>(); //constructor
 		~<Tên lớp>(); //destructor
 	};
-## 1.1 Phương thức tạo lập (CONSTRUCTOR) ##
+## 1. Phương thức tạo lập (CONSTRUCTOR) ##
 Phương thức constructor có nhiệm vụ tạo một đối tượng của lớp đó. Phương thức này có đặc điểm là không có kiểu trả về và được gọi tự động ghi tạo một đối tượng thuộc class đó.
 
     class <Tên lớp>
@@ -15,7 +15,7 @@ Phương thức constructor có nhiệm vụ tạo một đối tượng của l
 	}
 
 Phương thức constructor có thể có hoặc không có tham số, tùy theo kiểu tham số ta chia ra nhiều loại, phụ thuộc vào từng mục đích sử dụng. **Nhưng cơ bản vẫn là tạo ra một đối tượng từ các tham số truyền vào, xét thuộc tính và có thể thực hiện thêm các thao tác khác**. Một class có thể cài đặt nhiều constructor.
-### 5.1.1 Parameterized constructors ###
+### 1.1 Parameterized constructors ###
 Đây là constructor có chứa tham số đơn thuần.
 
     class HocSinh
@@ -61,7 +61,7 @@ Ngoài ra bạn có thể tạo constructor như sau.
 		HocSinh(int MaSoHS, string HoVaTen):MaSo(MaSoHS),HoTen(HoVaTen)
 		{
 		}
-### 5.1.2 Default constructors ###
+### 1.2 Default constructors ###
 Đây là constructor không có tham số, khá đơn giản để cài đặt.
 
     class HocSinh
@@ -90,7 +90,7 @@ Có thể không cần cài đặt. Compiler đã tự động tạo sẵn một
 	};
 
 Tốt nhất là luôn tự cài đặt các constructor, đừng nhờ vả đến compiler, vì có thể gây lỗi không đồng bộ khi chuyển code qua các compiler khác để build.
-### 5.1.3 Copy constructors ###
+### 1.3 Copy constructors ###
 Copy constructors là một dạng "nhái" các thuộc tính của một đối tượng này cho một đối tượng khác.
 
     HocSinh hs1(186,"ltd");
@@ -123,7 +123,7 @@ Deep copy là copy hoàn toàn tất cả nội dung của đối tượng kia.
 			this->HoTen = that.HoTen;
 			this->Ban = new HocSinh(*that.Ban);
 		}
-## 5.2 Phương thức hủy (DESTRUCTOR) ##
+## 2. Phương thức hủy (DESTRUCTOR) ##
 Tương tự như constructor nhưng destructor được gọi tự động ghi phương thức bị hủy hoặc ra ngoài scope của nó.
 
     class <Tên lớp>
@@ -131,7 +131,7 @@ Tương tự như constructor nhưng destructor được gọi tự động ghi 
 		~<Tên lớp>(); //destructor
 	};
 Phương thức destructor sẽ không có tham số, thường trong destructor chúng ta sẽ cài đặt để trả các vùng nhớ mà chúng ta xin cấp phát.
-## 5.3 Định nghĩa toán tử (OPERATOR OVERLOADING) ##
+## 3. Định nghĩa toán tử (OPERATOR OVERLOADING) ##
 Operator không hề xa lạ với các bạn.
 
     int a = 3;
