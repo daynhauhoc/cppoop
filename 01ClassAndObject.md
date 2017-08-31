@@ -1,6 +1,7 @@
 # Lớp và đối tượng #
 **Dẫn nhập:** Đối với các bạn mới bắt đầu học lập trình, các bạn được làm quen với lập trình hướng thủ tục, tất cả các hàm đều được viết chung với nhau trên cùng một file. Mỗi lệnh đều là một hoạt động theo sau đó là các đối tượng tham gia hoạt động đó. `increase(value);`
 
+```cpp
     #include <iostream>
     int increase(int a)
     {
@@ -12,9 +13,10 @@
     	std::cout << increase(value);
     	return 0;
     }
-
+```
 Trong khóa học này các bạn sẽ được làm quen với lập trình hướng đối tượng. Mỗi lệnh của các bạn sẽ bắt đầu bằng một đối tượng và sau đó là hoạt động mà đối tượng đó thực hiện. `a.increase();`
 
+```cpp
     #include <iostream>
     class sohang
     {
@@ -36,18 +38,19 @@ Trong khóa học này các bạn sẽ được làm quen với lập trình hư
     	a.setValue(1);
     	std::cout << a.increase();
     }
+```
 
 Lập trình hướng đối tượng là kĩ thuật rất cơ bản và quan trọng. Các điểm mạnh sẽ được giới thiệu qua từng bài học.
 Lập trình theo hướng đối tượng cho phép bạn quản lý các vấn đề trong bài toán theo đối tượng.
 Ở bài học đầu tiên các bạn sẽ 
-## 	1.1 Khái niệm về lớp và đối tượng ##
+## 1.1 Khái niệm về lớp và đối tượng ##
 
 Có hai khái niệm cơ bản trong lập trình hướng đối tượng là lớp (class) và đối tượng (object). Lớp chỉ là một khái niệm, trong khi đối tượng là một thứ cụ thể (được khai báo và có vùng nhớ riêng có).
 
 Ví dụ: Học sinh nói chung không chỉ rõ là ai nhưng ta vẫn biết học sinh có thể làm gì và có tính chất gì. Học sinh A là một học sinh cụ thể.
 
 Bạn có thể nhớ rằng class chỉ là một bản vẽ nhà và object là một ngôi nhà.
-###1.1.1 Khai báo lớp: tên lớp, thuộc tính, phương thức###
+### 1.1.1 Khai báo lớp: tên lớp, thuộc tính, phương thức ###
 Một lớp gồm có 3 thành phần chính:
 
 - Tên lớp
@@ -82,7 +85,7 @@ Ngoài ra trong khi khai báo có sử dụng 2 từ khóa là `private` và `pu
 `public` thì thoải mái hơn, tất cả các lớp đều có thể thực hiện các phương thức hoặc truy cập các thuộc tính có từ khóa public. Ngoài ra còn có từ khóa protected, cũng là một cách thức để bảo vệ các phương thức và thuộc tính, sẽ được giới thiệu ở bài học sau.
 
 
-###1.1.2 Cài đặt các phương thức của lớp###
+### 1.1.2 Cài đặt các phương thức của lớp ###
 Có 2 cách để cài đặt phương thức cho lớp:
 
 - Cách 1: khai bào đồng thời cài đặt ngay trong class.
@@ -134,7 +137,7 @@ Ví dụ:
 
 Cài đặt dành cho các class lớn, giúp việc quản lý và sửa đổi các phương thức dễ dàng.
 Lưu ý rằng: phần khai báo sẽ nằm trong file `.h`, phần cài đặt sẽ nằm trong file `.cpp`
-###1.1.3 Khái niệm về đối tượng và chu kỳ sống###
+### 1.1.3 Khái niệm về đối tượng và chu kỳ sống ###
 Một đối tượng luôn có một vùng nhớ riêng cho nó. Vì vậy chu kỳ sống của một đối tượng hiểu nôm na là từ khi nó được cấp vùng nhớ cho đến khi nó được thu hồi. Chi tiết hơn là từ khi nó thực hiện `constructor` cho đến khi nó thực hiện `destructor`. 2 quá trình này đều là phương thức của class, việc cài đặt giống như các phương thức khác, sẽ được giới thiệu ở bài sau.
 ## 1.2 Sự che chắn, bao bọc dữ liệu và phương thức ##
 Ở trên đã giới thiệu 2 từ khóa là public và private. Đây là một cách để bảo vệ dữ liệu và phương thức của một class.
